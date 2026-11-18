@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartcheck — cartridge lookup</title>
+  <meta name="description" content="Look up a game cartridge, compare it with catalog and label photos, and walk the checks for that console.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23161311' width='32' height='32' rx='6'/%3E%3Crect x='8' y='6' width='16' height='20' rx='2' fill='%23f3ecdf'/%3E%3Crect x='11' y='9' width='10' height='8' rx='1' fill='%23c4512c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="#/">
+      <span class="mark" aria-hidden="true"></span>
+      <span>Cartcheck</span>
+    </a>
+    <form id="search-form" role="search">
+      <label class="sr" for="q">Search titles or cart codes</label>
+      <input id="q" type="search" placeholder="Title or cart code" autocomplete="off" enterkeyhint="search">
+    </form>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <footer class="colophon">
+    <p>Catalog photos and the notable US listings come from <a href="https://www.pricecharting.com/category/video-games">PriceCharting</a>. Label codes, board codes, and the checks come from the public guides at <a href="https://gameverifying.com/wiki">Game Verifying</a>. PCB pictures are saved in this project from those guides, so they still open if the original host is down. Prices are not copied. This page does not authenticate a cartridge.</p>
+  </footer>
+  <dialog id="light">
+    <form method="dialog">
+      <button class="text-btn" value="close">Close</button>
+    </form>
+    <div id="light-body"></div>
+  </dialog>
+  <script src="js/catalog.js"></script>
+  <script src="js/guides.js"></script>
+  <script src="js/pcbs.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
